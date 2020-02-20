@@ -1,0 +1,10 @@
+<% @restaurants.each do |restaurant| %>
+<%= restaurant.name %>
+<% restaurant.address %>
+<%=restaurant.category %>
+<%=restaurant.phone_number %>
+<%=link_to "Details" , restaurant_path(restaurant)  %>
+<%= link_to "!Destroy!" , restaurant_path(restaurant.id),method: :delete%>
+<br>
+<% end %>
+<%= link_to "Create new", new_restaurant_path %>
